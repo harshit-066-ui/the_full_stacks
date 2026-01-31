@@ -1,0 +1,154 @@
+:root {
+  --bg: #ffffff;
+  --text: #111;
+  --accent: #007acc;
+  --card: #f4f6f8;
+  --nav: #ffffff;
+}
+
+.dark {
+  --bg: #0f1115;
+  --text: #e6e6e6;
+  --accent: #4caf50;
+  --card: #1b1e24;
+  --nav: #16181d;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  transition: background 0.3s, color 0.3s;
+  scroll-behavior: smooth;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  background: var(--nav);
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 500;
+}
+
+#mode-toggle {
+  border: none;
+  padding: 6px 14px;
+  border-radius: 6px;
+  background: var(--accent);
+  color: #fff;
+  cursor: pointer;
+}
+
+section {
+  min-height: 100vh;
+  padding: 80px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+.Home p {
+  font-size: 1.3rem;
+  margin: 10px 0;
+  color: var(--accent);
+}
+
+.FocusMode {
+  justify-content: center;
+}
+
+#timer-display {
+  font-size: 6rem;
+  margin: 30px 0;
+  color: var(--accent);
+}
+
+.controls button,
+#add-task,
+#export-json {
+  padding: 10px 18px;
+  margin: 6px;
+  border: none;
+  border-radius: 8px;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.TaskToDo input {
+  padding: 10px;
+  margin: 6px;
+  width: 240px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+#task-list {
+  width: 80%;
+  max-width: 900px;
+  list-style: none;
+  padding: 0;
+  margin-top: 30px;
+}
+
+#task-list li {
+  background: var(--card);
+  padding: 14px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  cursor: grab;
+  display: flex;
+  flex-direction: column;
+}
+
+#task-list li.done {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+#task-list button {
+  margin-top: 6px;
+  width: fit-content;
+}
+
+
+
+@media (max-width: 768px) {
+  #timer-display {
+    font-size: 4rem;
+  }
+
+  #task-list {
+    width: 95%;
+  }
+}
+
