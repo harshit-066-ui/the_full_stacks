@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Productivity Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#focus">Focus</a></li>
+      <li><a href="#tasks">Tasks</a></li>
+      <li><button id="mode-toggle">Dark Mode</button></li>
+    </ul>
+  </nav>
+
+  <section id="home" class="Home">
+    <h2>Dashboard</h2>
+    <p>Total Tasks: <span id="total-tasks">0</span></p>
+    <p>Completed Tasks: <span id="completed-tasks">0</span></p>
+    <p>Deep Focus: <span id="focus-stats">0s</span></p>
+  </section>
+
+  <section id="focus" class="FocusMode">
+    <h2>Focus Mode</h2>
+    <p id="timer-display">00:00:00</p>
+    <div class="controls">
+      <button id="update-timer">Set</button>
+      <button id="start-timer">Start</button>
+      <button id="stop-timer">Stop</button>
+      <button id="reset-timer">Reset</button>
+    </div>
+  </section>
+
+  <section id="tasks" class="TaskToDo">
+    <h2>Task Manager</h2>
+    <input id="task-input" type="text" placeholder="Task name" />
+    <input id="task-date" type="date" />
+    <input id="task-time" type="time" />
+    <button id="add-task">Add Task</button>
+    <button id="export-json">Export JSON</button>
+    <ul id="task-list"></ul>
+  </section>
+
+
+  <script type="module" src="script.js"></script>
+
+</body>
+</html>
