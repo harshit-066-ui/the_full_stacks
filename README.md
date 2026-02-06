@@ -1,0 +1,1 @@
+A collection of full-stack web applications built using modern JavaScript technologies. These projects demonstrate experience with frontend development, backend APIs, databases, and real-time communication.
